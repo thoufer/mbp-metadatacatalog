@@ -1,0 +1,31 @@
+# OSX files
+------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python cache
+----------------
+__pycache__/*
+*.py[cod]
+
+# Unit test / coverage reports
+------------------------------
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Django
+---------
+*.log
+*.sqlite3
+development.py
+
+# linux/Windows batch/shell scripts
+----------------------------------
+*.sh
+*.bat
+env/*

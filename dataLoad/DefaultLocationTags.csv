@@ -1,0 +1,134 @@
+1,Alabama,alabama
+2,Alaska,alaska
+3,Arizona,arizona
+4,Arkansas,arkansas
+5,California,california
+6,Colorado,colorado
+7,Connecticut,connecticut
+8,Delaware,delaware
+9,District of Columbia,district-of-columbia
+10,Florida,florida
+11,Georgia,georgia
+12,Hawaii,hawaii
+13,Idaho,idaho
+14,Illinois,illinois
+15,Indiana,indiana
+16,Iowa,iowa
+17,Kansas,kansas
+18,Kentucky,kentucky
+19,Louisana,louisana
+20,Maine,maine
+21,Maryland,maryland
+22,Massachusetts,massachusetts
+23,Michigan,michigan
+24,Minnesota,minnesota
+25,Mississippi,mississippi
+26,Missouri,missouri
+27,Montana,montana
+28,Nebraska,nebraska
+29,Nevada,nevada
+30,New Hampshire,new-hampshire
+31,New Jersey,new-jersey
+32,New Mexico,new-mexico
+33,New York,new-york
+34,North Carolina,north-carolina
+35,North Dakota,north-dakota
+36,Ohio,ohio
+37,Oklahoma,oklahoma
+38,Oregon,oregon
+39,Pennslyvania,pennslyvania
+40,Puerto Rico,puerto-rico
+41,Rhode Island,rhode-island
+42,South Carolina,south-carolina
+43,South Dakota,south-dakota
+44,Tennesee,tennesee
+45,Texas,texas
+46,Utah,utah
+47,Vermont,vermont
+48,Verginia,verginia
+49,Virgin Islands,virgin-islands
+50,Washington,washington
+51,West Virginia,west-virginia
+52,Wisconsin,wisconsin
+53,Wyoming,wyoming
+54,Alberta,alberta
+55,Manitoba,manitoba
+56,New Brunswick,new-brunswick
+57,Newfoundland,newfoundland
+58,Labrador,labrador
+59,Nova Scotia,nova-scotia
+60,Nunavut,nunavut
+61,Ontario,ontario
+62,Prince Edward Island,prince-edward-island
+63,Quebec,quebec
+64,Saskatchewan,saskatchewan
+65,Yukon Territory,yukon-territory
+66,Aguascalientes,aguascalientes
+67,Baja California,baja-california
+68,Baja California Sur,baja-california-sur
+69,Campeche,campeche
+70,Chiapas,chiapas
+71,Chihuahua,chihuahua
+72,Mexican Federal District,mexican-federal-district
+73,Coahuila,coahuila
+74,Colima,colima
+75,Durango,durango
+76,Guanajuato,guanajuato
+77,Guerrero,guerrero
+78,Hidalgo,hidalgo
+79,Jalisco,jalisco
+80,Michoacan,michoacan
+81,Morelos,morelos
+82,Mexico,mexico
+83,Nayarit,nayarit
+84,Nuevo Leon,nuevo-leon
+85,Oaxaca,oaxaca
+86,Puebla,puebla
+87,Queretaro,queretaro
+88,Quintana Roo,quintana-roo
+89,San Lous Potosi,san-lous-potosi
+90,Sinaloa,sinaloa
+91,Sonora,sonora
+92,Tabasco,tabasco
+93,Tamaulipas,tamaulipas
+94,Tlaxcala,tlaxcala
+95,Veracruz,veracruz
+96,Yucatan,yucatan
+97,Zacatecas,zacatecas
+98,Aleutian/Bering Sea Islands (BCR 1),aleutian/bering-sea-islands-(bcr-1)
+99,Western Alaska (BCR 2),western-alaska-(bcr-2)
+100,Arctic Plains and Mountains (BCR 3),arctic-plains-and-mountains-(bcr-3)
+101,Northwestern Interior Forest(BCR 4),northwestern-interior-forest(bcr-4)
+102,Northern Pacific Rainforest (BCR 5),northern-pacific-rainforest-(bcr-5)
+103,Boreal Taiga Plains (BCR 6),boreal-taiga-plains-(bcr-6)
+104,Taiga Shield and Hudson Plain (BCR 7),taiga-shield-and-hudson-plain-(bcr-7)
+105,Boreal Softwood Shield (BCR 8),boreal-softwood-shield-(bcr-8)
+106,Great Basin (BCR 9),great-basin-(bcr-9)
+107,Northern Rockies (BCR 10),northern-rockies-(bcr-10)
+108,Prairie Potholes (BCR 11),prairie-potholes-(bcr-11)
+109,Boreal Hardwood Transition (BCR 12),boreal-hardwood-transition-(bcr-12)
+110,Lower Great Lakes/St.Lawrence Plain (BCR 13),lower-great-lakes/st.lawrence-plain-(bcr-13)
+111,Atlantic Northern Forests (BCR 14),atlantic-northern-forests-(bcr-14)
+112,Sierra Nevada (BCR 15),sierra-nevada-(bcr-15)
+113,Southern Rockies Colorado Plateau (BCR 16),southern-rockies-colorado-plateau-(bcr-16)
+114,Badlands and Prairies (BCR 17),badlands-and-prairies-(bcr-17)
+115,Shortgrass Prairie (BCR 18),shortgrass-prairie-(bcr-18)
+116,Central Mixed Grass Prairie (BCR 19),central-mixed-grass-prairie-(bcr-19)
+117,Edwards Plateau (BCR 20),edwards-plateau-(bcr-20)
+118,Oaks and Prairies (BCR 21),oaks-and-prairies-(bcr-21)
+119,Eastern Tallgrass Prairie (BCR 22),eastern-tallgrass-prairie-(bcr-22)
+120,Prairie Hardwood Transition (BCR 23),prairie-hardwood-transition-(bcr-23)
+121,Central Hardwoods (BCR 24),central-hardwoods-(bcr-24)
+122,West Gulf Coastal Plain/Ouachitas (BCR 25),west-gulf-coastal-plain/ouachitas-(bcr-25)
+123,Mississippi Alluvial Valley (BCR 26),mississippi-alluvial-valley-(bcr-26)
+124,Southeastern Coastal Plain (BCR 27),southeastern-coastal-plain-(bcr-27)
+125,Appalachian Mountains (BCR 28),appalachian-mountains-(bcr-28)
+126,Piedmont (BCR 29),piedmont-(bcr-29)
+127,New England/MidAtlantic Coasts (BCR 30),new-england/midatlantic-coasts-(bcr-30)
+128,Peninsular Florida (BCR 31),peninsular-florida-(bcr-31)
+129,Coastal California (BCR 32),coastal-california-(bcr-32)
+130,Sonoran and Mojave Deserts (BCR 33),sonoran-and-mojave-deserts-(bcr-33)
+131,Sierra Madre Occidental (BCR 34),sierra-madre-occidental-(bcr-34)
+132,Chihuahuan Desert (BCR 35),chihuahuan-desert-(bcr-35)
+133,Tamaulipan Brushlands (BCR 36),tamaulipan-brushlands-(bcr-36)
+134,Gulf Coastal Prairie (BCR 37),gulf-coastal-prairie-(bcr-37)

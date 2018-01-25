@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock header %}
+
+{% block breadcrumb %}
+  <li><a href="{% url 'asset:asset-table-listing' %}">Home</a></li>
+  <li class="active"><span>Detail</span></li>
+{% endblock breadcrumb %}
+
+{% block content %}
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-10 border-bottom"><h1>{{ asset.name }}</h1></div>
+      <div class="col-1 my-auto">
+            <a href= "{% url 'asset:update-asset' pk=asset.pk %}">
+                <span class="fas fa-pencil-alt"></span></a>
+            <span class='disable-links'>
+              <a href="#"><span class="fas fa-print"></span></a>
+            </span>
+        </div>
+      </div>
+  </div>
+  <div class="container">
+    {% if asset.parent %}
+      <div class="row row-grid">
+          <div class="col-3"><h6>Parent Asset</h6></div>
+          <div class="col-9">{{ asset.parent }}</div>
+      </div>
+    {% endif %}
+    <div class="row row-grid">
+        <div class="col-3"><h6>Stewardship Organization</h6></div>
+        <div class="col-4">{{ asset.organization }}</div>
+    </div>
+    <div class="row row-grid">
+        <div class="col-3"><h6>Status</h6></div>
+        <div class="col">{{ asset.status }}</div>
+    </div>
+    <div class="row row-grid">
+        <div class="col-3"><h6>Spatial scale</h6></div>
+        <div class="col-3">{{ asset.spatial_scale }}</div>
+    </div>
+    <div class="row row-grid">
+        <div class="col-3"><h6>Abstract</h6></div>
+        <div class="col-8">{{ asset.description }}</div>
+    </div>
+    <div class="row row-grid">
+        <div class="col-3"><h6>Subject keywords</h6></div>
+        <div class="col-6">
+              {{ asset.subject_taglist }}
+        </div>
+    </div>
+    <div class="row row-grid">
+        <div class="col-3"><h6>Collection Period</h6></div>
+        <div class="col-4"> {{ asset.start_month}} - {{ asset.end_month}}</div>
+    </div>
+    <div class="row row-grid">
+          <div class="col-3"><h6>Asset time span</h6></div>
+          <div class="col-4"> {{asset.start_year}} - {{ asset.end_year }}</div>
+    </div>
+
+    <div class="row row-grid">
+      <div class="col-3"><h6>Primary Contact</h6></div>
+      <div class="col-6">
+          {{ asset.primary_contact_name }}<br>
+          {{ asset.primary_contact_address1 }}<br>
+          {% if asset.primary_contact_address2 %}
+            {{ asset.primary_contact_address2 }}<br>
+          {% endif %}
+          {{ asset.primary_contact_city}} {{ asset.primary_contact_state }} {{asset.primary_contact_zip}}
+          <br>
+          {{ asset.primary_contact_phone }}<br>
+          {{ asset.primary_contact_email}}
+        </div>
+      </div>
+
+    <div class="row row-grid">
+      <div class="col-3"><h6>Data Contact</h6></div>
+      <div class="col-9">
+        {{ asset.data_contact_name }}<br>
+        {{ asset.data_contact_address1 }}<br>
+        {% if asset.data_contact_address2 %}
+          {{ asset.data_contact_address2 }}<br>
+        {% endif %}
+        {{ asset.data_contact_city}} {{ asset.data_contact_state }} {{asset.data_contact_zip}}
+        <br>
+        {{ asset.data_contact_phone }}<br>
+        {{ asset.data_contact_email}}
+      </div>
+    </div>
+
+    {% if asset.partners %}
+    <div class="row row-grid">
+      <div class="col-3"><h6>Partners</h6></div>
+      <div class="col-9">{{ asset.partners }}</div>
+    </div>
+    {% endif %}
+
+    <div class="row row-grid">
+      <div class="col-3"><h6>Location keywords</h6></div>
+      <div class="col-9">{{ asset.place_taglist }}</div>
+    </div>
+</div>
+{% endblock content %}

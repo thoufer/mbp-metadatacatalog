@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if asset_list %}
+<div class="">
+  <span class="">Name:</span> {{ asset.name }}
+  <span class="">Stewardship Organization:</span> {{ asset.stewardship_organization }}
+  <span class="">Description:</span> {{ asset.description }}
+
+  <div class="">
+    <span class="">Time-span</span>
+    <span class="">Scale</span>
+  </div>
+
+  <div class="">
+    <span class="">Tags</span> {{ for tags in asset.tags ?}}
+  </div>
+</div>
+
+{% else %}
+  <p> There are no assets </p>
+{% endif %}
+
+{% endblock content %}

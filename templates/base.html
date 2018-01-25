@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block head_title %}MB Metadata Catalog{% endblock head_title %}</title>
+
+    {# load tag library #}
+    {% load static %}
+    {% load bootstrap4 %}
+
+    {# load CSS and javascript #}
+    {% bootstrap_css %}
+    <link href="{% static 'css/site.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'admin/js/vendor/jquery/jquery.js' %}"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.13/jquery.mask.js"></script>
+    <script type="text/javascript" defer src="{% static 'js/fontawesome-all.js' %}"></script>
+    <script type="text/javascript" defer src="{% static 'js/script_utils.js' %}"></script>
+
+    {% bootstrap_javascript %}
+
+
+
+    {% block header %}
+    {% endblock header %}
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="site-heading">
+        <img class="site-logo" src="{% static 'images/logosvg_70px.png' %}">
+        <span class="agency-text">U.S. Fish & Wildlife Service</span>
+        <span class="title">Migratory Bird Program Metadata Catalog</span>
+      </div>
+    </div>
+  </header>
+
+<div class="container-full-width" style="background-color: #e6e9ed;">
+  <div class="container">
+  <ol class="breadcrumb breadcrumb-arrow small mb-5">
+    {# https://bootsnipp.com/snippets/4O9nR #}
+    {% block breadcrumb %}
+    {% endblock breadcrumb %}
+  </ol>
+
+  {# dispaly django.contrib.messages as boostrap alerts #}
+  {% bootstrap_messages %}
+</div>
+</div>
+
+
+
+{% block content %}
+{% endblock content %}
+
+{% include "footer.html" %}
+{% block javascript %}
+{% endblock javascript %}
+</body>
+</html>
