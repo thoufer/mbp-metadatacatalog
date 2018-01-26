@@ -7,12 +7,12 @@ TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['nzimpfer.pythonanywhere.com', ]
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = get_env_variable('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = get_env_variable('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 465
-EMAIL_USE_SSL = True
-DEFAULT_FROM_EMAIL = 'thoufer <thoufer@gmail.com>'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = get_env_variable('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = get_env_variable('EMAIL_HOST_PASSWORD')
+# EMAIL_PORT = 465
+# EMAIL_USE_SSL = True
+# DEFAULT_FROM_EMAIL = 'thoufer <thoufer@gmail.com>'
 
 ADMINS = (
     ('nzimpfer', 'thoufer@gmail.com'),
