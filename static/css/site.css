@@ -1,3 +1,4 @@
+@media screen {
 html {
   position: relative;
   min-height: 100%;
@@ -36,6 +37,7 @@ body {
 }
 
 .site-heading {
+  display: block;
   position: relative;
   float: left;
   color: #ffffff;
@@ -173,4 +175,48 @@ body {
 }
 .breadcrumb-arrow li span {
     color: #434a54
+}
+} /* end @media width*/
+} /* end @media screen*/
+
+@media print {
+  .header {
+    margin-bottom: 40px;
+  }
+  .site-heading .site-logo {
+    float: left;
+    margin-top: 15px;
+  }
+
+  .site-heading .agency-text {
+    display: block;
+    padding-top: 15px;
+    padding-left: 75px;
+    font-weight: bold;
+    color: #000
+  }
+
+  .site-heading .title {
+    display: block;
+    padding-left: 75px;
+    margin-top: -5px;
+    font-size: 1.75em;
+    color: #000
+  }
+
+  #breadcrumb {
+    display: none;
+  }
+
+  #print-button {
+    display: none;
+  }
+
+  #edit-button {
+    display: none;
+  }
+
+  .row-grid {
+    margin-top: 20px;
+  }
 }

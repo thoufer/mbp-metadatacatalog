@@ -15,10 +15,12 @@
     <div class="row">
       <div class="col-10 border-bottom"><h1>{{ asset.name }}</h1></div>
       <div class="col-1 my-auto">
-            <a href= "{% url 'asset:update-asset' pk=asset.pk %}">
+            <a href= "{% url 'asset:update-asset' pk=asset.pk %}" alt="Edit asset" id="edit-button">
                 <span class="fas fa-pencil-alt"></span></a>
             <span class='disable-links'>
-              <a href="#"><span class="fas fa-print"></span></a>
+              <a href="javascript:window.print()" alt="Print page" id="print-button">
+                <span class="fas fa-print"></span>
+              </a>
             </span>
         </div>
       </div>
