@@ -8,10 +8,10 @@ TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = ['nzimpfer.pythonanywhere.com', ]
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = get_env_variable('EMAIL_HOST')
+EMAIL_HOST_USER = get_env_variable('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = get_env_variable('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = 'thoufer <thoufer@gmail.com>'
 
 ADMINS = (
@@ -26,6 +26,9 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': get_env_variable('DB_ENGINE'),
+        'OPTIONS': {
+            'sql_mode': 'STRICT_ALL_TABLES'
+            },
         'NAME': get_env_variable('DB_NAME'),
         'USER': get_env_variable('DB_USER'),
         'PASSWORD': get_env_variable('DB_PASSWORD'),

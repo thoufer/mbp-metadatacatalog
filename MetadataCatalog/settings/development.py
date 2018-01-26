@@ -20,8 +20,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'MetadataCatalog',
+#         'ENGINE': get_env_variable('DB_ENGINE'),
+#         'NAME': get_env_variable('DB_NAME'),
 #         'USER': get_env_variable('DB_USER'),
 #         'PASSWORD': get_env_variable('DB_PASSWORD'),
 #         'HOST': get_env_variable('DB_HOST'),
