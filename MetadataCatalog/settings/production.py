@@ -8,8 +8,8 @@ TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = ['nzimpfer.pythonanywhere.com', ]
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = get_env_variable('EMAIL_HOST')
+EMAIL_HOST_PASSWORD = get_env_variable('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'thoufer <thoufer@gmail.com>'
@@ -27,10 +27,10 @@ MANAGERS = ADMINS
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'MetadataCatalog',
-#         'USER': os.environ['DB_USER'],
-#         'PASSWORD': os.environ['DB_PASSWORD'],
-#         'HOST': os.environ['DB_HOST'],
-#         'PORT': os.envoron['DB_PORT'],
+#         'USER': get_env_variable('DB_USER'),
+#         'PASSWORD': get_env_variable('DB_PASSWORD'),
+#         'HOST': get_env_variable('DB_HOST'),
+#         'PORT': get_env_variable('DB_PORT'),
 #     }
 # }
 DATABASES = {
