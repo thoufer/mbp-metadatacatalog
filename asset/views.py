@@ -13,21 +13,6 @@ from .forms import AssetCreateForm, AssetListFormHelper, AssetFilterForm
 from .filters import AssetFilter
 from .utils import PagedFilteredTableView
 
-class AssetListView(ListView):
-    """ """
-    model = Asset
-    template_name = 'asset_list.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(AssetListView, self).get_context_data(**kwargs)
-        table = AssetListTable(Asset.objects.all(),
-                default=' ',
-                orderable=True,
-                order_by_field='id',)
-        RequestConfig(self.request, paginate={'per_page':20}).configure(table)
-        context['table'] = table
-        return context
-
 
 class AssetCreateView(SuccessMessageMixin, CreateView):
     """ """
@@ -97,12 +82,3 @@ class AssetTableView(PagedFilteredTableView):
     paginate_by = 25
     filter_class = AssetFilter
     formhelper_class = AssetListFormHelper
-
-
-class AssetTableView2(SingleTableMixin, FilterView):
-    """ """
-    filterset_class = AssetFilter
-    table_class = AssetListTable
-    form_class = AssetFilterForm
-    model = Asset
-    template_name = 'asset_list3.html'
