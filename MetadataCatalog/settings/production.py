@@ -1,6 +1,6 @@
-from .base import *
-
 import os
+
+from .base import *
 
 
 TEMPLATE_DEBUG = DEBUG
@@ -47,5 +47,5 @@ CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
 
 # pythonanywhere sites by default run on ssl.
-#SECURE_HSTS_SECONDS =
-#SECURE_SSL_REDIRECT =
+SECURE_HSTS_SECONDS = 3600
+SECURE_SSL_REDIRECT = True
