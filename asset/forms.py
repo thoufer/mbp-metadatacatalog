@@ -115,6 +115,15 @@ class AssetCreateForm(forms.ModelForm):
             'data_contact_address2':
                 forms.TextInput(attrs={'placeholder': 'Building, Suite, Floor, Mailstop'},
                 ),
+            'primary_contact_email':
+                forms.TextInput(attrs={'placeholder': 'john_simth@fws.gov'},
+                ),
+            'primary_contact_phone':
+                forms.TextInput(attrs={'placeholder': '(123) 222-4545'},
+                ),
+            'data_contact_phone':
+                forms.TextInput(attrs={'placeholder': '(123) 222-4545'},
+                ),
         }
 
 

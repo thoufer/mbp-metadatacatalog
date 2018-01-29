@@ -126,7 +126,7 @@ class Asset(models.Model):
         )
 
     state_choices = (
-        ('', 'Choose'),
+        ('', 'State'),
         ('AL','AL'),('AK','AK'),('AZ','AZ'),('AR','AR'),('CA','CA'),('CO','CO'),
         ('CT','CT'),('DE','DE'),('DC','DC'),('FL','FL'),('GA','GA'),('HI','HI'),
         ('ID','ID'),('IL','IL'),('IN','IN'),('IA','IA'),('KS','KS'),('KY','KY'),
