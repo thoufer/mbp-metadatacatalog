@@ -193,13 +193,13 @@ class Asset(models.Model):
         related_name='subject_tags',
         verbose_name=_('Description keywords'),
         help_text=_('Select all that apply. Additional keywords can be created by typing '
-                    'the desired keyword, followed by selecting it from the menu or <Enter>.')
+                    'the desired keyword, followed by selecting it from the menu or &lt;Enter&gt;.')
         )
     place_tags = TaggableManager(through=TaggedPlace,
         related_name='place_tags',
         verbose_name=_('Location keywords'),
         help_text=_('Select all that apply. Additional keywords can be created by typing '
-                    'the desired keyword, followed by selecting it from the menu or <Enter>.')
+                    'the desired keyword, followed by selecting it from the menu or &lt;Enter&gt;.')
         )
     description = models.TextField(_('Abstract'),
         max_length=10000,
