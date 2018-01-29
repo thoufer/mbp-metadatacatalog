@@ -62,9 +62,10 @@ class AssetCreateForm(forms.ModelForm):
                 css_class = 'form-row'
             ),
             HTML("<div class='my-5'></div>"),
-            Div(
-                HTML('<input id="copy_contact_info" name="copy_contact" type="checkbox" onchange="copyContactHandler(this)">'),
-                HTML('<label for="copy_contact_info">Contact for data is the same as primary contact</label>'),
+            Div(Div(
+                HTML('<input id="copy_contact_info" name="copy_contact" style="margin-right: 10px;"' 
+                     'type="checkbox" onchange="copyContactHandler(this)">'),
+                HTML('<label for="copy_contact_info">Contact for data is the same as primary contact</label>')),
                 css_class = 'form-row',
                 ),
             Div(
