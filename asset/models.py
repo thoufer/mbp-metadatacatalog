@@ -96,9 +96,9 @@ class Asset(models.Model):
     """
     status_choices =(
         ('', 'Choose status'),
-        ('operational','Operational'),
-        ('inactive','Inactive'),
-        ('experimental','Experimental'),
+        ('Operational','Operational'),
+        ('Inactive','Inactive'),
+        ('Experimental','Experimental'),
         )
 
     spatial_scale_choices = (
