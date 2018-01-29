@@ -162,14 +162,14 @@ class Asset(models.Model):
         max_length=15,
         blank=False,
         choices=status_choices,
-        help_text=_("Selection the value that best represents the current state "
-            "of the asset. Inactive should be used for assets that have ceased "
+        help_text=_("Select the value that best represents the current status "
+            "of the asset. `Inactive` should be used for assets that have ceased "
             "operations or have been discontinued.")
         )
     isContracted = models.BooleanField(_('Contracted'),
         default=False,
-        help_text=_("This should be checked for assets in which the storage or "
-                    "maintenance of the asset are performed through a contractual "
+        help_text=_("Check this for assets in which the storage or maintenance of"
+                    "the asset are performed through a contractual "
                     "aggreeement with a non-fws entity.")
         )
     spatial_scale = models.CharField(
@@ -179,36 +179,40 @@ class Asset(models.Model):
         help_text=_("Choose the spatial scale that best represents the largest "
                     "scale that the data are collected.")
         )
-    start_month = models.CharField(max_length=3,
+    start_month = models.CharField(_('Collection start month'),
+        max_length=3,
         blank=True,
         null=True,
         choices=month_choices)
-    end_month = models.CharField(max_length=3,
+    end_month = models.CharField(_('Collection end month'),
+    max_length=3,
         blank=True,
         null=True,
         choices=month_choices)
     subject_tags = TaggableManager(through=TaggedSubject,
         related_name='subject_tags',
         verbose_name=_('Description keywords'),
-        help_text=_('??. Select all that apply or create additional ones.')
+        help_text=_('Select all that apply. Additional keywords can be created by typing '
+                    'the desired keyword, followed by selecting it from the menu or <Enter>.')
         )
     place_tags = TaggableManager(through=TaggedPlace,
         related_name='place_tags',
         verbose_name=_('Location keywords'),
-        help_text=_('??. Select all that apply or create additional ones.')
+        help_text=_('Select all that apply. Additional keywords can be created by typing '
+                    'the desired keyword, followed by selecting it from the menu or <Enter>.')
         )
     description = models.TextField(_('Abstract'),
         max_length=10000,
-        help_text=_("Provide an extentive description which provides detailed "
+        help_text=_("Enter a description which provides detailed "
                     "information about the use, timing, location, and methods "
-                    "of collection or analysis. (Max 10,000 characters)")
+                    "of data collection or analysis. (Max 10,000 characters)")
         )
     partners = models.CharField(_('Partners'),
         max_length = 100,
         blank=True,
         null=True,
-        help_text=_("Include all partners as a comma separate list, that have direct involvement in the "
-                    "collection, storage, or maintenance of the asset.")
+        help_text=_("Include all partners as a comma separated list, that have direct "
+                    "involvement in the collection, storage, or maintenance of the asset.")
         )
     start_year = models.CharField(_('Starting Year'),
         max_length=4,
