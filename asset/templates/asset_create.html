@@ -5,7 +5,13 @@
 
 {% block breadcrumb %}
   <li><a href="{% url 'asset:asset-table-listing' %}">Home</a></li>
-  <li class="active"><span>Add/Modify</span></li>
+  <li class="active"><span>
+      {% if object %}
+        Update
+      {% else %}
+        Add
+      {% endif %}
+    </span></li>
 {% endblock breadcrumb %}
 
 {% block content %}
