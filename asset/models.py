@@ -17,24 +17,21 @@ class Organization(models.Model):
     region = models.CharField(max_length=2, blank=False)
     name = models.CharField(max_length=150, blank=False)
 
-    def _set_region(self):
+    def save(self, *args, **kwargs):
         """
         Every org is part of a FWS admin region. Make it a property, which
         is the first digit of the org code. R9 == Headquarters.
         """
         region = str(self.code)[0]
         if region is '9':
-            return 'HQ'
+            self.region = 'HQ'
         else:
-            return 'R{}'.format(region)
+            self.region = 'R{}'.format(region)
 
-    def save(self, *args, **kwargs):
-        self.region = _set_region()
-        super(Organization, self).save(*args, *kwargs)
+        super(Organization, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.region + ' - ' + self.name
-
 
     class Meta:
         ordering = ['code']
