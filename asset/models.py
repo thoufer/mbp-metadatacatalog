@@ -156,7 +156,7 @@ class Asset(models.Model):
         help_text=_('A descriptive name of the asset.')
         )
     status = models.CharField(_('Asset Status'),
-        max_length=15,
+        max_length=23,
         blank=False,
         choices=status_choices,
         help_text=_("Select the value that best represents the current status "
