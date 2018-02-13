@@ -170,7 +170,7 @@ class Asset(models.Model):
                     "aggreeement with a non-fws entity.")
         )
     spatial_scale = models.CharField(
-        max_length=15,
+        max_length=25,
         blank=False,
         choices= spatial_scale_choices,
         help_text=_("Choose the spatial scale that best represents the largest "
