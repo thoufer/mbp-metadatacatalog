@@ -95,40 +95,40 @@
 95,Veracruz,veracruz
 96,Yucatan,yucatan
 97,Zacatecas,zacatecas
-98,Aleutian/Bering Sea Islands (BCR 1),aleutian/bering-sea-islands-(bcr-1)
-99,Western Alaska (BCR 2),western-alaska-(bcr-2)
-100,Arctic Plains and Mountains (BCR 3),arctic-plains-and-mountains-(bcr-3)
-101,Northwestern Interior Forest(BCR 4),northwestern-interior-forest(bcr-4)
-102,Northern Pacific Rainforest (BCR 5),northern-pacific-rainforest-(bcr-5)
-103,Boreal Taiga Plains (BCR 6),boreal-taiga-plains-(bcr-6)
-104,Taiga Shield and Hudson Plain (BCR 7),taiga-shield-and-hudson-plain-(bcr-7)
-105,Boreal Softwood Shield (BCR 8),boreal-softwood-shield-(bcr-8)
-106,Great Basin (BCR 9),great-basin-(bcr-9)
-107,Northern Rockies (BCR 10),northern-rockies-(bcr-10)
-108,Prairie Potholes (BCR 11),prairie-potholes-(bcr-11)
-109,Boreal Hardwood Transition (BCR 12),boreal-hardwood-transition-(bcr-12)
-110,Lower Great Lakes/St.Lawrence Plain (BCR 13),lower-great-lakes/st.lawrence-plain-(bcr-13)
-111,Atlantic Northern Forests (BCR 14),atlantic-northern-forests-(bcr-14)
-112,Sierra Nevada (BCR 15),sierra-nevada-(bcr-15)
-113,Southern Rockies Colorado Plateau (BCR 16),southern-rockies-colorado-plateau-(bcr-16)
-114,Badlands and Prairies (BCR 17),badlands-and-prairies-(bcr-17)
-115,Shortgrass Prairie (BCR 18),shortgrass-prairie-(bcr-18)
-116,Central Mixed Grass Prairie (BCR 19),central-mixed-grass-prairie-(bcr-19)
-117,Edwards Plateau (BCR 20),edwards-plateau-(bcr-20)
-118,Oaks and Prairies (BCR 21),oaks-and-prairies-(bcr-21)
-119,Eastern Tallgrass Prairie (BCR 22),eastern-tallgrass-prairie-(bcr-22)
-120,Prairie Hardwood Transition (BCR 23),prairie-hardwood-transition-(bcr-23)
-121,Central Hardwoods (BCR 24),central-hardwoods-(bcr-24)
-122,West Gulf Coastal Plain/Ouachitas (BCR 25),west-gulf-coastal-plain/ouachitas-(bcr-25)
-123,Mississippi Alluvial Valley (BCR 26),mississippi-alluvial-valley-(bcr-26)
-124,Southeastern Coastal Plain (BCR 27),southeastern-coastal-plain-(bcr-27)
-125,Appalachian Mountains (BCR 28),appalachian-mountains-(bcr-28)
-126,Piedmont (BCR 29),piedmont-(bcr-29)
-127,New England/MidAtlantic Coasts (BCR 30),new-england/midatlantic-coasts-(bcr-30)
-128,Peninsular Florida (BCR 31),peninsular-florida-(bcr-31)
-129,Coastal California (BCR 32),coastal-california-(bcr-32)
-130,Sonoran and Mojave Deserts (BCR 33),sonoran-and-mojave-deserts-(bcr-33)
-131,Sierra Madre Occidental (BCR 34),sierra-madre-occidental-(bcr-34)
-132,Chihuahuan Desert (BCR 35),chihuahuan-desert-(bcr-35)
-133,Tamaulipan Brushlands (BCR 36),tamaulipan-brushlands-(bcr-36)
-134,Gulf Coastal Prairie (BCR 37),gulf-coastal-prairie-(bcr-37)
+98,BCR 1-Aleutian/Bering Sea Islands,BCR-1-Aleutian/Bering-Sea-Islands
+99,BCR 2-Western Alaska,BCR-2-Western-Alaska
+100,BCR 3-Arctic Plains and Mountains,BCR-3-Arctic-Plains-and-Mountains
+101,BCR 4-Northwestern Interior Forest,BCR-4-Northwestern-Interior-Forest
+102,BCR 5-Northern Pacific Rainforest,BCR-5-Northern-Pacific-Rainforest
+103,BCR 6-Boreal Taiga Plains,BCR-6-Boreal-Taiga-Plains
+104,BCR 7-Taiga Shield and Hudson Plain,BCR-7-Taiga-Shield-and-Hudson-Plain
+105,BCR 8-Boreal Softwood Shield,BCR-8-Boreal-Softwood-Shield
+106,BCR 9-Great Basin,BCR-9-Great-Basin
+107,BCR 10-Northern Rockies,BCR-10-Northern-Rockies
+108,BCR 11-Prairie Potholes,BCR-11-Prairie-Potholes
+109,BCR 12-Boreal Hardwood Transition,BCR-12-Boreal-Hardwood-Transition
+110,BCR 13-Lower Great Lakes/St.Lawrence Plain,BCR-13-Lower-Great-Lakes/St.Lawrence-Plain
+111,BCR 14-Atlantic Northern Forests,BCR-14-Atlantic-Northern-Forests
+112,BCR 15-Sierra Nevada,BCR-15-Sierra-Nevada
+113,BCR 16-Southern Rockies Colorado Plateau,BCR-16-Southern-Rockies-Colorado-Plateau
+114,BCR 17-Badlands and Prairies,BCR-17-Badlands-and-Prairies
+115,BCR 18-Shortgrass Prairie,BCR-18-Shortgrass-Prairie
+116,BCR 19-Central Mixed Grass Prairie,BCR-19-Central-Mixed-Grass-Prairie
+117,BCR 20-Edwards Plateau,BCR-20-Edwards-Plateau
+118,BCR 21-Oaks and Prairies,BCR-21-Oaks-and-Prairies
+119,BCR 22-Eastern Tallgrass Prairie,BCR-22-Eastern-Tallgrass-Prairie
+120,BCR 23-Prairie Hardwood Transition,BCR-23-Prairie-Hardwood-Transition
+121,BCR 24-Central Hardwoods,BCR-24-Central-Hardwoods
+122,BCR 25-West Gulf Coastal Plain/Ouachitas,BCR-25-West-Gulf-Coastal-Plain/Ouachitas
+123,BCR 26-Mississippi Alluvial Valley,BCR-26-Mississippi-Alluvial-Valley
+124,BCR 27-Southeastern Coastal Plain,BCR-27-Southeastern-Coastal-Plain
+125,BCR 28-Appalachian Mountains,BCR-28-Appalachian-Mountains
+126,BCR 29-Piedmont,BCR-29-Piedmont
+127,BCR 30-New England/MidAtlantic Coasts,BCR-30-New-England/MidAtlantic-Coasts
+128,BCR 31-Peninsular Florida,BCR-31-Peninsular-Florida
+129,BCR 32-Coastal California,BCR-32-Coastal-California
+130,BCR 33-Sonoran and Mojave Deserts,BCR-33-Sonoran-and-Mojave-Deserts
+131,BCR 34-Sierra Madre Occidental,BCR-34-Sierra-Madre-Occidental
+132,BCR 35-Chihuahuan Desert,BCR-35-Chihuahuan-Desert
+133,BCR 36-Tamaulipan Brushlands,BCR-36-Tamaulipan-Brushlands
+134,BCR 37-Gulf Coastal Prairie,BCR-37-Gulf-Coastal-Prairie
