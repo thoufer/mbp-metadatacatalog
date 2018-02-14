@@ -65,6 +65,13 @@ class PlaceAutocomplete(autocomplete.Select2QuerySetView):
     """
     API view to retun place tags for autocomplete
     """
+    def has_add_permission(self, request):
+        """
+        Override the default to require a user to be authenticated in order to add tags.
+        This may turn out to be a bad idea if abused by users.
+        """
+        return True
+        
     def get_queryset(self):
         qs = LocationTag.objects.all()
 
