@@ -81,6 +81,11 @@ body {
     margin-top: 10px;
 }
 
+.cardinality {
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+}
+
 @media (min-width: 768px ) {
   .row {
       position: relative;
