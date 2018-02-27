@@ -86,6 +86,7 @@ body {
   margin-right: 0.75em;
 }
 
+
 @media (min-width: 768px ) {
   .row {
       position: relative;
@@ -185,6 +186,10 @@ body {
 }
 .breadcrumb-arrow li span {
     color: #434a54
+}
+
+tbody  {
+  border-bottom: 2px solid #ECECEC;
 }
 } /* end @media width*/
 } /* end @media screen*/
