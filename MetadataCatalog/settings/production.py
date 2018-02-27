@@ -5,7 +5,7 @@ from .base import *
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['nzimpfer.pythonanywhere.com', ]
+ALLOWED_HOSTS = ['www.migbirddatacatalog.us',]
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = get_env_variable('EMAIL_HOST_USER')
