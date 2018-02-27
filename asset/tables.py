@@ -22,5 +22,4 @@ class AssetListTable(tables.Table):
         fields = ['name','status','spatial_scale']
         attrs = {'class': "table table-hover table-striped"}
         empty_text = "No Assets found"
-        per_page = 25
         sequence = ('OrgCode','region','OrgName','name','status', 'spatial_scale',)
