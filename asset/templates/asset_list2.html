@@ -81,6 +81,7 @@
     {% if table.page %}
       {% block pagination %}
           {% bootstrap_pagination table.page url=request.get_full_path  size='small' %}
+          <span style="margin-left: 3em; color: gray;">Showing {{ record_start }} - {{ record_end }} of {{ rowcount }} results</span>
       {% endblock pagination %}
       {% endif %}
   </div>
