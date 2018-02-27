@@ -17,10 +17,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include, re_path
 
+from asset.views import AssetTableView
 
 urlpatterns = [
+    path('asset/', include('asset.urls')),
     path('asset-admin/', admin.site.urls),
-    path('asset/', include('asset.urls'))
+    path('', AssetTableView.as_view(), name='asset-table-listing'),
 ]
 
 if settings.DEBUG:

@@ -6,13 +6,11 @@ from .views import (
     AssetUpdateView,
     SubjectAutocomplete,
     PlaceAutocomplete,
-    AssetTableView,
     )
 
 app_name = 'asset'
 
 urlpatterns = [
-    path('', AssetTableView.as_view(), name='asset-table-listing'),
     path('detail/<int:pk>/', AssetDetailView.as_view(), name='detail-asset'),
     path('add/', AssetCreateView.as_view(), name='add-asset'),
     path('edit/<int:pk>/', AssetUpdateView.as_view(), name='update-asset'),
