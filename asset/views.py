@@ -71,7 +71,7 @@ class PlaceAutocomplete(autocomplete.Select2QuerySetView):
         This may turn out to be a bad idea if abused by users.
         """
         return True
-        
+
     def get_queryset(self):
         qs = LocationTag.objects.all()
 
