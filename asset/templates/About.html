@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+  <li><a href="{% url 'asset-table-listing' %}">Home</a></li>
+  <li class="active"><span>About</span></li>
+{% endblock breadcrumb %}
+
+{% block content %}
+<div class="container">
+  <h1>Catalog Description</h1>
+
+<p>The Migratory Bird Program's Strategic Plan: 2018-28 includes "Manage Bird Data and Information" as one of the Program’s four primary goals. The first objective under this goal is to modernize our data management processes, with establishment of a governance structure identified as a critical early action.</p>
+
+<p>A necessary step to meet this strategic goal will be the development of a comprehensive accounting of our data resources and assessment our data management capacity and needs. To aid this effort, the Migratory Bird Program (MBP) is developing a data catalog built from the preliminary data asset inventory that was compiled by the Migratory Bird Data Management Team through a program-wide survey.  There are three primary purposes for this catalog:</p>
+
+<ol>
+<li>To assist the Migratory Bird Program in planning, prioritizing, and supporting our data management activities, and communicating about our data resources;</li>
+<li>To provide a coherent structure for data management and data governance; and,</li>
+</li>To improve data discoverability, access, and integration.</li>
+</ol>
+
+<p>When fully operational, the catalog will provide a list of data assets for which the MBP has primary responsibility, along with searchable metadata that is compatible with ServCat, USGS, and Data.gov metadata schemas.</p>
+
+<p>What is a Migratory Bird Program data asset? For the purposes of creating a catalog, we have established the following definitions and rules:</p>
+
+<p>Data Asset: A collection of data and data elements that are organized and managed as a single entity and that inform specific decisions or identifiable products. Data elements within a data asset may include: data tables with original measurements, estimates, or model predictions, shapefiles, specialized software & platforms, documents, and code.</p>
+
+<p>A data asset will be included in the catalog if the MBP maintains and stores a unique or definitive version of the data.  Data that are available from other USFWS programs or external partners will not be included, unless the data have been edited or manipulated in a non-reproducible manner and are essential for MBP operations or decisions.  Included in the catalog are data assets that MBP contracts with others to maintain, if we plan to assume maintenance of the asset on termination of payment.</p>
+
+<p>Data assets that are logically, logistically, or programmatically associated with one another are defined as sub-assets under a unifying parent asset. Sub-assets share a common history, administration, decision context, and/or species+location+platform.</p>
+
+<p>Coordinating the management of related data assets is necessary for (i) effective data discoverability and integration (catalog goal #3), (ii) extending the usefulness of historical data, and (iii) ensuring the preservation of small-scale datasets. Identifying parent assets will enable efficient data governance and prioritization, and improve programmatic planning, resource allocation, and communication (catalog goals #1 and #2). Once a MBP governance structure is in place, a process for establishing appropriate parent/child/sibling relationships among data assets should be established.</p> 
+</div>
+{% endblock content %}
