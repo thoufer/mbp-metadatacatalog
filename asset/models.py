@@ -150,12 +150,12 @@ class Asset(models.Model):
                     "requires coordinated planning and management, select the "
                     "assest that is its parent.")
         )
-    name = models.CharField(_('Asset Name'),
+    name = models.CharField(_('Name'),
         max_length=200,
         blank=False,
         help_text=_('A descriptive name of the asset.')
         )
-    status = models.CharField(_('Asset Status'),
+    status = models.CharField(_('Status'),
         max_length=23,
         blank=False,
         choices=status_choices,
