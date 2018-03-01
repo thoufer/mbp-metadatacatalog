@@ -19,7 +19,7 @@ class AssetCreateView(SuccessMessageMixin, CreateView):
     model = Asset
     template_name = 'asset_create.html'
     form_class = AssetCreateForm
-    success_url = reverse_lazy('asset:asset-table-listing')
+    success_url = reverse_lazy('asset-table-listing')
     success_message = "%(name)s was created successfully"
 
 
@@ -29,7 +29,7 @@ class AssetUpdateView(UpdateView):
     template_name = 'asset_create.html'
     form_class = AssetCreateForm
     #success_message = ""
-    success_url = reverse_lazy('asset:asset-table-listing')
+    success_url = reverse_lazy('asset-table-listing')
 
 
 class AssetDetailView(DetailView):
@@ -89,3 +89,10 @@ class AssetTableView(PagedFilteredTableView):
     paginate_by = 25
     filter_class = AssetFilter
     formhelper_class = AssetListFormHelper
+
+
+class SubjectTagSearch():
+    pass
+
+class LocationTagSearch():
+    pass
