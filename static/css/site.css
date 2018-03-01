@@ -1,20 +1,16 @@
 @media screen {
-html {
-  position: relative;
-  min-height: 100%;
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  line-height: 28px;
 }
 
-body {
-  margin-top: 0px;
-  margin-bottom: 100px;
+.footer, .push {
+  height: 170px;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
   background-color: #112e51;
 }
 
@@ -24,10 +20,10 @@ body {
   text-decoration: none;
 }
 
-.footer a:hover {
-/*  color: #A5CDFF;*/
-  color: #CBDF90;
-  text-decoration: none;
+.footer-branding {
+  border-bottom: 1px solid #43484a;
+  margin-bottom: 28px;
+  padding-bottom: 25px;
 }
 
 .header {
@@ -41,6 +37,7 @@ body {
   position: relative;
   float: left;
   color: #ffffff;
+  margin-top: 20px;
 }
 
 .site-heading .site-logo {
@@ -191,6 +188,7 @@ body {
 tbody  {
   border-bottom: 2px solid #ECECEC;
 }
+
 } /* end @media width*/
 } /* end @media screen*/
 
