@@ -19,6 +19,6 @@ class AssetListTable(tables.Table):
     class Meta:
         model = Asset
         fields = ['name','status','spatial_scale']
-        attrs = {'class': "table table-hover table-striped"}
+        attrs = {'class': "table table-striped"}
         empty_text = "No Assets found"
         sequence = ('name','status','OrgName','region','spatial_scale',)
