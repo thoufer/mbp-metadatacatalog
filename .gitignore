@@ -28,3 +28,7 @@ coverage.xml
 *.sh
 *.bat
 env/*
+
+# load files
+-------------
+dataLoad/
