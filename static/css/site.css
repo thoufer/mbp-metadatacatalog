@@ -6,6 +6,14 @@ html, body{
   line-height: 28px;
 }
 
+#home-icon {
+  font-size: 1.25em;
+}
+
+#menu{
+  padding: 10px;
+}
+
 .footer, .push {
   height: 170px;
 }
@@ -27,28 +35,26 @@ html, body{
 }
 
 .header {
+  display: block;
   background-color: #112e51;
-  height: 100px;
   margin-bottom: 0px;
 }
 
 .site-heading {
   display: block;
   position: relative;
-  float: left;
   color: #ffffff;
-  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .site-heading .site-logo {
   float: left;
-  margin-top: 15px;
+  margin-right: 10px;
 }
 
 .site-heading .agency-text {
   display: block;
-  padding-top: 15px;
-  padding-left: 75px;
+  position: relative;
   font-size: 16px;
   font-weight: bold;
 }
@@ -184,6 +190,10 @@ html, body{
 .breadcrumb-arrow li span {
     color: #434a54
 }
+
+table.table thead th.sortable { background: url('../images/sort_both.png') no-repeat center right; }
+table.table thead th.asc { background: url('../images/sort_asc.png') no-repeat center right; }
+table.table thead th.desc { background: url('../images/sort_desc.png') no-repeat center right; }
 
 tbody  {
   border-bottom: 2px solid #ECECEC;
