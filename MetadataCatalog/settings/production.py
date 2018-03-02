@@ -29,7 +29,7 @@ DATABASES = {
         'OPTIONS': {
             'sql_mode': 'STRICT_ALL_TABLES'
             },
-        'NAME': get_env_variable('DB_NAME'),
+        'NAME': get_env_variable('DB_USER') + '$' + get_env_variable('DB_NAME'),
         'USER': get_env_variable('DB_USER'),
         'PASSWORD': get_env_variable('DB_PASSWORD'),
         'HOST': get_env_variable('DB_HOST'),
