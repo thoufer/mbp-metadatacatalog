@@ -49,6 +49,7 @@
   <div class="container" id="breadcrumb">
   <ol class="breadcrumb breadcrumb-arrow small mb-5">
     {# https://bootsnipp.com/snippets/4O9nR #}
+      <li><a href="{% url 'asset-table-listing' %}"><i id="home-icon" class="fas fa-home"></i></a></li>
     {% block breadcrumb %}
     {% endblock breadcrumb %}
   </ol>
