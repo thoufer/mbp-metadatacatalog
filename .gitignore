@@ -29,6 +29,6 @@ coverage.xml
 *.bat
 env/*
 
-# load files
--------------
-dataLoad/
+# Raw table load files
+-----------------------
+dataLoad/*
