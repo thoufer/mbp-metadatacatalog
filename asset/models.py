@@ -101,9 +101,9 @@ class Asset(models.Model):
     spatial_scale_choices = (
         ('', 'Choose Scale'),
         ('BCR','BCR'),
-        ('multi-state/province','multi-state/province'),
-        ('single state/province','single state/province'),
-        ('local','local'),
+        ('Multiple states or provinces','Multiple states or provinces'),
+        ('Single state or province','Single state or province'),
+        ('Local','Local'),
         )
 
     month_choices = (
@@ -170,7 +170,7 @@ class Asset(models.Model):
                     "aggreeement with a non-fws entity.")
         )
     spatial_scale = models.CharField(
-        max_length=25,
+        max_length=50,
         blank=False,
         choices= spatial_scale_choices,
         help_text=_("Choose the spatial scale that best represents the largest "
@@ -182,7 +182,7 @@ class Asset(models.Model):
         null=True,
         choices=month_choices)
     end_month = models.CharField(_('Collection end month'),
-    max_length=3,
+        max_length=3,
         blank=True,
         null=True,
         choices=month_choices)
