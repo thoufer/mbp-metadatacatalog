@@ -40,7 +40,7 @@ function format_asset(d) {
 }
 
 $(document).ready(function() {
-  var table = $('#example').DataTable({
+  var table = $('#asset_table').DataTable({
       'ajax': {
         url:"/asset/api/asset",
         dataSrc: ''
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
     // add event listener for opening and closing details
     // ?? not sure why svg works but i doesn't in the delegate call?
-    $('#example tbody').delegate("tr td.child-control svg", "click", function(e){
+    $('#asset_table tbody').delegate("tr td.child-control svg", "click", function(e){
       e.preventDefault();
       var tr =  $(this).closest('tr');
       var row = table.row(tr);
