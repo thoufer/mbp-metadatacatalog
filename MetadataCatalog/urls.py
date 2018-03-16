@@ -18,17 +18,17 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.urls import path, include, re_path
 
-from asset.views import AssetTableView
+from asset.views import AssetTableView, NewListing
 
 urlpatterns = [
     path('asset/', include('asset.urls')),
     path('asset-admin/', admin.site.urls),
     path('about/', TemplateView.as_view(template_name='About.html'), name="about"),
-    path('', AssetTableView.as_view(), name='asset-table-listing'),
+    path('', NewListing.as_view(), name='asset-table-listing'),
 ]
 
 if settings.DEBUG:
     import debug_toolbar
-    urlpatterns = [
+    urlpatterns += [
         re_path(r'^__debug__/', include(debug_toolbar.urls)),
-    ] + urlpatterns
+    ]

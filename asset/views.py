@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, UpdateView, ListView, DetailView
+from rest_framework import generics, viewsets
 from django_tables2 import RequestConfig, SingleTableMixin
 from django_filters.views import FilterView
 from dal import autocomplete
@@ -12,6 +13,7 @@ from .tables import AssetListTable
 from .forms import AssetCreateForm, AssetListFormHelper, AssetFilterForm
 from .filters import AssetFilter
 from .utils import PagedFilteredTableView
+from .serializers import AssetSerializer
 
 
 class AssetCreateView(SuccessMessageMixin, CreateView):
@@ -41,6 +43,7 @@ class AssetDetailView(DetailView):
     template_name = 'asset_detail.html'
 
 
+# Views for API calls below
 class SubjectAutocomplete(autocomplete.Select2QuerySetView):
     """
     API view to return subject tags for autocomplete.
@@ -91,8 +94,8 @@ class AssetTableView(PagedFilteredTableView):
     formhelper_class = AssetListFormHelper
 
 
-class SubjectTagSearch():
-    pass
+class AssetAPI(generics.ListAPIView):
+    serializer_class = AssetSerializer
 
-class LocationTagSearch():
-    pass
+    def get_queryset(self, *args, **kwargs):
+        return Asset.objects.filter(parent__isnull=True).prefetch_related('child_asset')
