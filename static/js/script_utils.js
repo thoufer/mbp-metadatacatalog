@@ -73,7 +73,8 @@ $(document).ready(function() {
         {data:'subject_taglist', visible: false},
         {data:'place_taglist', visible: false}
       ],
-      order: [[1, 'asc']]
+      order: [[1, 'asc']],
+      stateSave: true
     });
 
     // add event listener for opening and closing details
