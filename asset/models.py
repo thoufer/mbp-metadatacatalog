@@ -145,6 +145,7 @@ class Asset(models.Model):
         null=True,
         on_delete=models.PROTECT,
         verbose_name=_('Parent Asset'),
+        related_name='child_asset',
         help_text=_("If this data asset shares a common history, administration, "
                     "decision context, and/or species + location + platform that "
                     "requires coordinated planning and management, select the "
