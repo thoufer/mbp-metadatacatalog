@@ -43,6 +43,15 @@ class AssetDetailView(DetailView):
     template_name = 'asset_detail.html'
 
 
+class AssetTableView(PagedFilteredTableView):
+    """ """
+    model = Asset
+    template_name = 'asset_list2.html'
+    table_class = AssetListTable
+    paginate_by = 25
+    filter_class = AssetFilter
+    formhelper_class = AssetListFormHelper
+
 # Views for API calls below
 class SubjectAutocomplete(autocomplete.Select2QuerySetView):
     """
@@ -82,16 +91,6 @@ class PlaceAutocomplete(autocomplete.Select2QuerySetView):
             qs = qs.filter(name__istartswith=self.q)
 
         return qs
-
-
-class AssetTableView(PagedFilteredTableView):
-    """ """
-    model = Asset
-    template_name = 'asset_list2.html'
-    table_class = AssetListTable
-    paginate_by = 25
-    filter_class = AssetFilter
-    formhelper_class = AssetListFormHelper
 
 
 class AssetAPI(generics.ListAPIView):
