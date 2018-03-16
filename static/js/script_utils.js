@@ -22,9 +22,7 @@ function format_asset(d) {
   // `d` is the orignal data object for the row
   /* since their could be more than one child, iterate through
   the asset */
-  BEGIN = `<div class="slider">
-            <table class="child">
-          `;
+  BEGIN = '<div class="slider"><table class="child">';
   END = '</table></div>';
   rows = ''
   for (i=0; i < d.child_asset.length; i++){
