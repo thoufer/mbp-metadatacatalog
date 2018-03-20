@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=11">
-    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">    
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% block head_title %}MB Data Asset Catalog{% endblock head_title %}</title>
@@ -47,21 +47,24 @@
     </div>
   </header>
 
-<div class="container-full-width" style="background-color: #e6e9ed;">
-  <div class="container" id="breadcrumb">
-  <ol class="breadcrumb breadcrumb-arrow small mb-5">
-    {# https://bootsnipp.com/snippets/4O9nR #}
-      <li><a href="{% url 'asset-table-listing' %}"><i id="home-icon" class="fas fa-home"></i></a></li>
-    {% block breadcrumb %}
-    {% endblock breadcrumb %}
-  </ol>
-
-  {# dispaly django.contrib.messages as boostrap alerts #}
-  {% bootstrap_messages %}
+<div class="container-full-width mb-5">
+  <div style="background-color: #e6e9ed;">
+    <div class="container" id="breadcrumb">
+    <ol class="breadcrumb breadcrumb-arrow small">
+      {# https://bootsnipp.com/snippets/4O9nR #}
+        <li><a href="{% url 'asset-table-listing' %}"><i id="home-icon" class="fas fa-home"></i></a></li>
+      {% block breadcrumb %}
+      {% endblock breadcrumb %}
+    </ol>
+  </div>
+  </div>
+  {# display django.contrib.messages as boostrap alerts #}
+  {% if messages %}
+    <div class="container">
+      {% bootstrap_messages %}
+    </div>
+    {% endif %}
 </div>
-</div>
-
-
 
 {% block content %}
 {% endblock content %}
