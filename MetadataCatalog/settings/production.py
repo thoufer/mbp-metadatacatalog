@@ -14,10 +14,6 @@ ALLOWED_HOSTS = ['www.migbirddatacatalog.us',]
 # EMAIL_USE_SSL = True
 # DEFAULT_FROM_EMAIL = 'thoufer <thoufer@gmail.com>'
 
-ADMINS = (
-    ('nzimpfer', 'thoufer@gmail.com'),
-)
-
 MANAGERS = ADMINS
 
 # Database

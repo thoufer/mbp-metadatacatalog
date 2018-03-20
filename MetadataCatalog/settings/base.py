@@ -33,6 +33,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
+ADMINS = [
+    ('nzimpfer', 'thoufer@gmail.com'),
+]
+
 # Application definition
 
 INSTALLED_APPS = [
