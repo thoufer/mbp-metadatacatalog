@@ -9,10 +9,8 @@ from django_filters.views import FilterView
 from dal import autocomplete
 
 from .models import Asset, TaggedSubject, TaggedPlace, SubjectTag, LocationTag
-from .tables import AssetListTable
-from .forms import AssetCreateForm, AssetListFormHelper, AssetFilterForm
+from .forms import AssetCreateForm
 from .filters import AssetFilter
-from .utils import PagedFilteredTableView
 from .serializers import AssetSerializer
 
 
@@ -42,15 +40,6 @@ class AssetDetailView(DetailView):
     context_object_name = 'asset'
     template_name = 'asset_detail.html'
 
-
-class AssetTableView(PagedFilteredTableView):
-    """ """
-    model = Asset
-    template_name = 'asset_list2.html'
-    table_class = AssetListTable
-    paginate_by = 25
-    filter_class = AssetFilter
-    formhelper_class = AssetListFormHelper
 
 # Views for API calls below
 class SubjectAutocomplete(autocomplete.Select2QuerySetView):

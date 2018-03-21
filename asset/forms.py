@@ -63,7 +63,7 @@ class AssetCreateForm(forms.ModelForm):
             ),
             HTML("<div class='my-5'></div>"),
             Div(Div(
-                HTML('<input id="copy_contact_info" name="copy_contact" style="margin-right: 10px;"' 
+                HTML('<input id="copy_contact_info" name="copy_contact" style="margin-right: 10px;"'
                      'type="checkbox" onchange="copyContactHandler(this)">'),
                 HTML('<label for="copy_contact_info">Contact for data is the same as primary contact</label>')),
                 css_class = 'form-row',
@@ -125,51 +125,4 @@ class AssetCreateForm(forms.ModelForm):
             'data_contact_phone':
                 forms.TextInput(attrs={'placeholder': '(123) 222-4545'},
                 ),
-        }
-
-
-class AssetListFormHelper(FormHelper):
-    """
-    """
-    model = Asset
-    form_tag = False
-    form_show_labels = False
-
-    layout = Layout(
-        'name',
-        'status',
-        'organization__region',
-        ButtonHolder(
-            Submit('submit', 'Filter', css_class='button btn-primary'),
-        )
-    )
-
-
-class AssetFilterForm(forms.Form):
-    """ """
-    def __init__(self, *args, **kwargs):
-        super(AssetFilterForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper(self)
-        self.helper.disable_csrf = True
-        self.helper.form_method = 'GET'
-        self.helper.form_show_labels = False
-        self.helper = Layout(
-            Div(
-                Div('organization__region', css_class='col'),
-                Div('name', css_class='col'),
-                Div('status', css_class='col'),
-                css_class='form-row'),
-            ButtonHolder(
-                Submit('submit', 'Filter', css_class='button btn-primary btn-sm'),
-            )
-        )
-
-    class Meta:
-        fields = ('organization__region','name','status')
-        widgets = {
-            'organization__region': forms.TextInput(attrs={'placeholder': 'Region',
-                                                            'class': 'form-control-small'}),
-            'name': forms.TextInput(attrs={'placeholder': 'Asset Name contains',
-                                            'class': 'form-control-small'}),
-
         }
