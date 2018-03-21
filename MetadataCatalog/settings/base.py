@@ -37,8 +37,11 @@ ADMINS = [
     ('nzimpfer', 'thoufer@gmail.com'),
 ]
 
-# Application definition
+# base email config
+SERVER_EMAIL = 'no-reply@migbirddatacatalog.us'
+EMAIL_SUBJECT_PREFIX = '[Data-catalog]'
 
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
