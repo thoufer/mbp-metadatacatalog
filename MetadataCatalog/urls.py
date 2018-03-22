@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
+from django.http import HttpResponse
 from django.views.generic import TemplateView
 from django.urls import path, include, re_path
 
@@ -23,6 +24,7 @@ urlpatterns = [
     path('asset-admin/', admin.site.urls),
     path('about/', TemplateView.as_view(template_name='About.html'), name="about"),
     path('', TemplateView.as_view(template_name='asset_datatable.html'), name='asset-table-listing'),
+    path('robots.txt', lambda r: HttpResponse("User-agent: *\nDisallow: /", content_type="text/plain")),
 ]
 
 if settings.DEBUG:
