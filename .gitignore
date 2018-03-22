@@ -22,6 +22,7 @@ coverage.xml
 ---------
 *.log
 *.sqlite3
+static/*
 
 # linux/Windows batch/shell scripts
 ----------------------------------

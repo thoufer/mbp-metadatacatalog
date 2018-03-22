@@ -133,10 +133,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(os.path.join(BASE_DIR, "asset"), "static"),
 ]
 
-#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # make taggit tags case insensitive
 TAGGIT_CASE_INSENSITIVE = True

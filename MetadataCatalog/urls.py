@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.http import HttpResponse
 from django.views.generic import TemplateView
@@ -25,7 +26,7 @@ urlpatterns = [
     path('about/', TemplateView.as_view(template_name='About.html'), name="about"),
     path('', TemplateView.as_view(template_name='asset_datatable.html'), name='asset-table-listing'),
     path('robots.txt', lambda r: HttpResponse("User-agent: *\nDisallow: /", content_type="text/plain")),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
