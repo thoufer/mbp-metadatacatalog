@@ -84,7 +84,8 @@ a, .page-link {
 }
 
 .row-grid {
-    margin-top: 10px;
+    margin-top: 15px;
+    line-height: 20px;
 }
 
 .cardinality {
