@@ -82,7 +82,10 @@ class PlaceAutocomplete(autocomplete.Select2QuerySetView):
         return qs
 
 
-class AssetAPI(generics.ListAPIView):
+class AssetAPI(viewsets.ReadOnlyModelViewSet):
+    """
+    A basic viewset for viewing assets.
+    """
     serializer_class = AssetSerializer
 
     def get_queryset(self, *args, **kwargs):
