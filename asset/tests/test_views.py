@@ -1,52 +1,119 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 
-#from asset.models import Asset
-# from asset.views import (AssetCreateView,
-#     AssetUpdateView,
-#     AssetDetailView,
-#     SubjectAutocomplete,
-#     PlaceAutocomplete,
-#     AssetTableView
-#     )
-
-
-class AssetTableViewTestCase(TestCase):
-    """ Test asset listing table/view """
-    def setUp(self):
-        self.client = Client()
-
-    def test_base_view(self):
-            """ test using url resolver """
-            response = self.client.get(reverse('asset:asset-table-listing'))
-            self.assertEqual(response.status_code, 200)
-            self.assertTemplateUsed('asset_list2.html')
-
-    def test_one_entry(self):
-        asset = asset.objects.create()
+from asset.models import Organization, Asset
+from asset.views import (AssetCreateView,
+     AssetUpdateView,
+     AssetDetailView,
+     )
 
 
 class AssetCreateViewTestCase(TestCase):
     """ Test view to create new asset objects """
-    def setUp(self):
-        pass
 
-    def test_AssetCreateView(self):
-        response = self.client.get(reverse('asset:add-asset'))
-        self.assertEqual(response.status_code, 200)
-
+    def test_view_url_exists_at_desired_location(self):
         response = self.client.get('/asset/add/')
         self.assertEqual(response.status_code, 200)
 
+    def test_view_accessbile_by_name(self):
+        response = self.client.get(reverse('asset:add-asset'))
+        self.assertEqual(response.status_code, 200)
 
-    def test_AssetUpdateView(self):
-        pass
+    def test_view_uses_correct_template(self):
+        response = self.client.get(reverse('asset:add-asset'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'asset_create.html')
 
-    def test_AssetDetailView(self):
-        pass
 
-    def test_SubjectAutocomplete(self):
-        pass
+class AssetUpdateViewTestCase(TestCase):
+    """ Test view for updating assets """
 
-    def test_PlaceAutocomplete(self):
-        pass
+    @classmethod
+    def setUpTestData(cls):
+        organization = Organization(code=90210, name='Division Of Migratory Bird Management')
+        asset = Asset.objects.create(organization=organization,
+            name='Waterfowl Breeding Population and Habitat Survey',
+            status='Operational',
+            spatial_scale='Local',
+            start_month='May',
+            end_month='July',
+            description='Some Text for an Abstract',
+            partners='CWS, USGS',
+            start_year='1955',
+            end_year='Present',
+            primary_contact_name='John Smith',
+            primary_contact_address1='1600 Pennslyvania Ave.',
+            primary_contact_city='Washington',
+            primary_contact_state='DC',
+            primary_contact_zip='20320',
+            primary_contact_phone='(123) 876-5309',
+            primary_contact_email='John_smith@fws.gov',
+            data_contact_name='John Smith',
+            data_contact_address1='1600 Pennslyvania Ave.',
+            data_contact_city='Washington',
+            data_contact_state='DC',
+            data_contact_zip='20320',
+            data_contact_phone='(123) 876-5309',
+            data_contact_email='John_smith@fws.gov')
+        asset.subject_tags.add('Aerial Survey', 'Ground Survey', 'Waterfowl', 'Loons')
+        asset.place_tags.add('US', 'Canada')
+
+    def test_view_url_exists_at_desired_location(self):
+        response = self.client.get('/asset/edit/1/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_accessbile_by_name(self):
+        response = self.client.get(reverse('asset:update-asset', args=[1]))
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_uses_correct_template(self):
+        response = self.client.get(reverse('asset:update-asset', args=[1]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'asset_create.html')
+
+
+class AssetDetailViewTestCase(TestCase):
+    """ Test view which displays asset details. """
+
+    @classmethod
+    def setUpTestData(cls):
+        organization = Organization(code=90210, name='Division Of Migratory Bird Management')
+        asset = Asset.objects.create(organization=organization,
+            name='Waterfowl Breeding Population and Habitat Survey',
+            status='Operational',
+            spatial_scale='Local',
+            start_month='May',
+            end_month='July',
+            description='Some Text for an Abstract',
+            partners='CWS, USGS',
+            start_year='1955',
+            end_year='Present',
+            primary_contact_name='John Smith',
+            primary_contact_address1='1600 Pennslyvania Ave.',
+            primary_contact_city='Washington',
+            primary_contact_state='DC',
+            primary_contact_zip='20320',
+            primary_contact_phone='(123) 876-5309',
+            primary_contact_email='John_smith@fws.gov',
+            data_contact_name='John Smith',
+            data_contact_address1='1600 Pennslyvania Ave.',
+            data_contact_city='Washington',
+            data_contact_state='DC',
+            data_contact_zip='20320',
+            data_contact_phone='(123) 876-5309',
+            data_contact_email='John_smith@fws.gov')
+        asset.subject_tags.add('Aerial Survey', 'Ground Survey', 'Waterfowl', 'Loons')
+        asset.place_tags.add('US', 'Canada')
+
+    def test_view_url_exists_at_desired_location(self):
+        response = self.client.get('/asset/detail/1/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_accessbile_by_name(self):
+        response = self.client.get(reverse('asset:detail-asset', args=[1]))
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_uses_correct_template(self):
+        response = self.client.get(reverse('asset:detail-asset', args=[1]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'asset_detail.html')
