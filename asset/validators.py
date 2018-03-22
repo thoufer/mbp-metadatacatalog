@@ -50,7 +50,7 @@ def validate_name(value):
     """
     A persons name can only contain Aa-Zz and an apostrophe for the Irish or hyphens for hyphenated surnames.
     """
-    if re.match("[\W*'-]", value) is not None:
+    if re.match("^[\W*|\w[-]\w*$|\d'{1}\d]", value) is not None:
         raise ValidationError(
             _('Name may contain only alphabetic characters, apostrophes, & hyphens.')
         )
