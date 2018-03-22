@@ -35,6 +35,8 @@ SECRET_KEY = get_env_variable('SECRET_KEY')
 
 ADMINS = [
     ('nzimpfer', 'thoufer@gmail.com'),
+    ('rrau', 'rebecca_rau@fws.gov'),
+    ('esilverman', 'emily_silverman@fws.gov'),
 ]
 
 # base email config
