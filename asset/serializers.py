@@ -16,4 +16,8 @@ class AssetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Asset
         fields = ('id','name','status','organization','spatial_scale','child_asset','subject_taglist','place_taglist',)
-        depth = 2
+
+    def get_fields(self):
+        fields = super(AssetSerializer, self).get_fields()
+        fields['child_asset'] = AssetSerializer(many=True)
+        return fields
