@@ -24,4 +24,3 @@ class ValidatorsTestCase(TestCase):
             validate_name('Nathan_zimpfer')
             validate_name('Nathan zimpfer@fws.gov')
             validate_name('bob Smit?')
-            validate_name("Nancy O'Dell")  # This is valid and test should fail..
