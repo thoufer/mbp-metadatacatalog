@@ -7,16 +7,14 @@ TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['www.migbirddatacatalog.us',]
 
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = get_env_variable('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = get_env_variable('EMAIL_HOST_PASSWORD')
-# EMAIL_PORT = 465
-# EMAIL_USE_SSL = True
-# DEFAULT_FROM_EMAIL = 'thoufer <thoufer@gmail.com>'
+# Email config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = get_env_variable('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = get_env_variable('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
-ADMINS = (
-    ('nzimpfer', 'thoufer@gmail.com'),
-)
 
 MANAGERS = ADMINS
 

@@ -33,8 +33,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
-# Application definition
+ADMINS = [
+    ('nzimpfer', 'thoufer@gmail.com'),
+    ('rrau', 'rebecca_rau@fws.gov'),
+    ('esilverman', 'emily_silverman@fws.gov'),
+]
 
+# base email config
+SERVER_EMAIL = 'no-reply@migbirddatacatalog.us'
+EMAIL_SUBJECT_PREFIX = '[Data-catalog]'
+
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

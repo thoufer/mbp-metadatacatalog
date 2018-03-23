@@ -1,0 +1,9 @@
+
+An asset was added to the catalog with the following information:
+
+*name:* {{ name }}
+*Organization:* {{ organization }}
+*Primary Contact:* {{ primary_contact_name }} ({{ primary_contact_email }})
+
+*Description:*
+{{ description }}

@@ -2,8 +2,10 @@ from django.db.models.query import Prefetch
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.urls import reverse_lazy
+from django.core.mail import mail_admins
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, UpdateView, ListView, DetailView
+from django.template.loader import render_to_string
 from rest_framework import generics, viewsets
 from django_tables2 import RequestConfig, SingleTableMixin
 from django_filters.views import FilterView
@@ -22,6 +24,20 @@ class AssetCreateView(SuccessMessageMixin, CreateView):
     form_class = AssetCreateForm
     success_url = reverse_lazy('asset-table-listing')
     success_message = "%(name)s was created successfully"
+
+    def form_valid(self, form):
+        """ Send an email to admins notifying them that a new asset has been created, for review. """
+        msg = render_to_string('asset_create_email.txt',
+            {
+            'name': form.cleaned_data.get('name'),
+            'organization': form.cleaned_data.get('organization'),
+            'description': form.cleaned_data.get('description'),
+            'primary_contact_name': form.cleaned_data.get('primary_contact_name'),
+            'primary_contact_email': form.cleaned_data.get('primary_contact_email')
+            })
+        mail_admins(subject="New asset added", message=msg)
+
+        return super(AssetCreateView, self).form_valid(form)
 
 
 class AssetUpdateView(UpdateView):
