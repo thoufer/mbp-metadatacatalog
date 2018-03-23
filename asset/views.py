@@ -1,3 +1,4 @@
+from django.db.models.query import Prefetch
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.urls import reverse_lazy
@@ -39,6 +40,9 @@ class AssetDetailView(DetailView):
     model = Asset
     context_object_name = 'asset'
     template_name = 'asset_detail.html'
+
+    def get_object(self):
+        return Asset.objects.prefetch_related(Prefetch('child_asset', to_attr="sub_assets")).get(pk=self.kwargs['pk'])
 
 
 # Views for API calls below

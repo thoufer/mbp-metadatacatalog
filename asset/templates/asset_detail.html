@@ -31,6 +31,16 @@
           <div class="col-9">{{ asset.parent.name }}</div>
       </div>
     {% endif %}
+    {% if asset.sub_asset %}
+    <div class="row row-grid">
+        <div class="col-3"><h6>Sub Assets</h6></div>
+        <div class="col-9">
+          {% for sub_asset in asset.sub_assets %}
+            <span style="display: block;">{{ sub_asset.name }}</span>
+          {% endfor %}
+        </div>
+    </div>
+    {% endif %}
     <div class="row row-grid">
         <div class="col-3"><h6>Stewardship Organization</h6></div>
         <div class="col-4">{{ asset.organization }}</div>
