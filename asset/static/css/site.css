@@ -99,6 +99,13 @@ div.slider {
   background-color: LightGray;
 }
 
+#asset-title {
+  margin-left: 10px;
+}
+
+#button-block {
+  margin-top: 10px;
+}
 /*
  * Table styles
  */

@@ -11,18 +11,20 @@
 
 
   <div class="container">
-    <div class="row">
-      <div class="col-10 border-bottom"><h1>{{ asset.name }}</h1></div>
-      <div class="col-1 my-auto">
-            <a href= "{% url 'asset:update-asset' pk=asset.pk %}" alt="Edit asset" id="edit-button">
-                <span class="fas fa-pencil-alt"></span></a>
+    <div class="row border-bottom">
+      <h1 id='asset-title'>{{ asset.name }}</h1>
+    </div>
+
+    <div id="button-block" class="d-flex justify-content-end">
+            <a href= "{% url 'asset:update-asset' pk=asset.pk %}" alt="Edit asset" id="edit-button" class="btn btn-sm btn-outline-primary"
+            style="margin-right:5px;">
+                <i class="fas fa-pencil-alt"></i> Edit</a>
             <span class='disable-links'>
-              <a href="javascript:window.print()" alt="Print page" id="print-button">
-                <span class="fas fa-print"></span>
-              </a>
+              <a href="javascript:window.print()" alt="Print page" id="print-button" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-print"></i> Print</a>
             </span>
-        </div>
-      </div>
+    </div>
+
   </div>
   <div class="container">
     {% if asset.parent %}
@@ -43,38 +45,38 @@
     {% endif %}
     <div class="row row-grid">
         <div class="col-3"><h6>Stewardship Organization</h6></div>
-        <div class="col-4">{{ asset.organization }}</div>
+        <div class="col-9">{{ asset.organization }}</div>
     </div>
     <div class="row row-grid">
         <div class="col-3"><h6>Status</h6></div>
-        <div class="col">{{ asset.status }}</div>
+        <div class="col-9">{{ asset.status }}</div>
     </div>
     <div class="row row-grid">
         <div class="col-3"><h6>Spatial scale</h6></div>
-        <div class="col-3">{{ asset.spatial_scale }}</div>
+        <div class="col-9">{{ asset.spatial_scale }}</div>
     </div>
     <div class="row row-grid">
         <div class="col-3"><h6>Abstract</h6></div>
-        <div class="col-8">{{ asset.description }}</div>
+        <div class="col-9">{{ asset.description }}</div>
     </div>
     <div class="row row-grid">
         <div class="col-3"><h6>Subject keywords</h6></div>
-        <div class="col-6">
+        <div class="col-9">
               {{ asset.subject_taglist }}
         </div>
     </div>
     <div class="row row-grid">
         <div class="col-3"><h6>Collection Period</h6></div>
-        <div class="col-4"> {{ asset.start_month}} - {{ asset.end_month}}</div>
+        <div class="col-9"> {{ asset.start_month}} - {{ asset.end_month}}</div>
     </div>
     <div class="row row-grid">
           <div class="col-3"><h6>Asset time span</h6></div>
-          <div class="col-4"> {{asset.start_year}} - {{ asset.end_year }}</div>
+          <div class="col-9"> {{asset.start_year}} - {{ asset.end_year }}</div>
     </div>
 
     <div class="row row-grid">
       <div class="col-3"><h6>Primary Contact</h6></div>
-      <div class="col-6">
+      <div class="col-9">
           {{ asset.primary_contact_name }}<br>
           {{ asset.primary_contact_address1 }}<br>
           {% if asset.primary_contact_address2 %}
