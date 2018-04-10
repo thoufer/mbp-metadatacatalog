@@ -14,6 +14,7 @@ class AssetSerializer(serializers.ModelSerializer):
     organization = OrganizationSerializer()
 
     class Meta:
+        ordering = ['name',]
         model = Asset
         fields = ('id','name','status','organization','spatial_scale','child_asset','subject_taglist','place_taglist',)
 
