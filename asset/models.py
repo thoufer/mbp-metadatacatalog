@@ -189,7 +189,7 @@ class Asset(models.Model):
         choices=month_choices)
     subject_tags = TaggableManager(through=TaggedSubject,
         related_name='subject_tags',
-        verbose_name=_('Description keywords'),
+        verbose_name=_('Keywords'),
         help_text=_('Select all that apply. Additional keywords can be created by typing '
                     'the desired keyword, followed by selecting it from the menu or &lt;Enter&gt;.')
         )
