@@ -137,7 +137,7 @@ class Asset(models.Model):
 
     organization = models.ForeignKey('Organization',
         related_name='assets',
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
         verbose_name=_('Primary Organization of Stewardship'),
         )
     parent = models.ForeignKey('self',
