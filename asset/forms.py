@@ -22,8 +22,7 @@ class AssetCreateForm(forms.ModelForm):
         self.helper.form_method = 'POST'
         self.helper.layout = Layout(
             Div(
-                Div('name', css_class= 'form-group col-md-10'),
-                Div('parent', css_class= 'form-group col-md-10'),
+                Div('name', css_class= 'form-group col-md-10'),            
                 Div('subject_tags', css_class= 'form-group col-md-10'),
                 Div('status', css_class= 'form-group col-md-4'),
                 Div('description', css_class= 'form-group col-md-10'),
