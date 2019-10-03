@@ -16,9 +16,8 @@ class AssetSerializer(serializers.ModelSerializer):
     class Meta:
         ordering = ['name',]
         model = Asset
-        fields = ('id','name','status','organization','spatial_scale','child_asset','subject_taglist','place_taglist',)
+        fields = ('id','name','status','organization','spatial_scale','subject_taglist','place_taglist',)
 
     def get_fields(self):
-        fields = super(AssetSerializer, self).get_fields()
-        fields['child_asset'] = AssetSerializer(many=True)
+        fields = super(AssetSerializer, self).get_fields()        
         return fields
