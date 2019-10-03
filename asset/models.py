@@ -137,13 +137,13 @@ class Asset(models.Model):
 
     organization = models.ForeignKey('Organization',
         related_name='assets',
-        on_delete=models.SET_NULL,
+        on_delete=models.PROTECT,
         verbose_name=_('Primary Organization of Stewardship'),
         )
     parent = models.ForeignKey('self',
         blank=True,
         null=True,
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
         verbose_name=_('Parent Asset'),
         related_name='child_asset',
         help_text=_("If this data asset shares a common history, administration, "
