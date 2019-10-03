@@ -32,6 +32,14 @@
         <div class="col-9">{{ asset.organization }}</div>
     </div>
     <div class="row row-grid">
+        <div class="col-3"><h6>Partners</h6></div>
+        <div class="col-9">{{ asset.partners }}</div>
+    </div>
+    <div class="row row-grid">
+        <div class="col-3"><h6>Storage or maintenance contracted</h6></div>
+        <div class="col-9">{{ asset.isContracted|yesno:"Yes,No" }}</div>
+    </div>
+    <div class="row row-grid">
         <div class="col-3"><h6>Status</h6></div>
         <div class="col-9">{{ asset.status }}</div>
     </div>
