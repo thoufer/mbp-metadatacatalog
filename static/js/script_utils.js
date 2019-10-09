@@ -48,9 +48,10 @@ $(document).ready(function() {
         {
           data: null,
           render: function(data, type, full, meta){
-            if ( data.child_asset.length > 0) {
+            /*if ( data.child_asset.length > 0) {
               return '<i class="fas fa-plus-circle" style="color: green; font-size:1.2em;"></i>';
-            } else { return ''; }
+            } else { return ''; }*/
+            return '';
           },
           width: 1,
           searchable: false,
