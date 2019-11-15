@@ -23,7 +23,7 @@ class Organization(models.Model):
         is the first digit of the org code. R9 == Headquarters.
         """
         region = str(self.code)[0]
-        if region is '9':
+        if region == '9':
             self.region = 'HQ'
         else:
             self.region = 'R{}'.format(region)
