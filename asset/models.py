@@ -258,6 +258,8 @@ class Asset(models.Model):
     data_contact_phone = models.CharField(_('Phone'), max_length=14, blank=False)
     data_contact_phone_ext = models.CharField(_('Extension'), max_length=4, blank=True, null=True)
     history = HistoricalRecords(table_name='asset_history')
+    created = models.DateTimeField(_('Created'), auto_now_add=True, blank=True, null=True)
+    last_modified = models.DateTimeField(_('Last Update'), auto_now=True, blank=True, null=True)
 
     @property
     def subject_taglist(self):

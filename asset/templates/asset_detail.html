@@ -107,5 +107,11 @@
       <div class="col-3"><h6>Location keywords</h6></div>
       <div class="col-9">{{ asset.place_taglist }}</div>
     </div>
+
+
+    <div class="float-right font-italic small" style="padding-top: 75px;">
+      Last updated: {{ asset.last_modified |date:"F j, Y" }}
+    </div>     
+
 </div>
 {% endblock content %}
