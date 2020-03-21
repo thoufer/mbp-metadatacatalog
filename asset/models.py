@@ -206,7 +206,7 @@ class Asset(models.Model):
                     "of data collection or analysis. (Max 10,000 characters)")
         )
     partners = models.CharField(_('Partners'),
-        max_length = 100,
+        max_length = 5000,
         blank=True,
         null=True,
         help_text=_("Include all partners as a comma separated list, that have direct "
