@@ -71,8 +71,8 @@ $(document).ready(function() {
           searchable: false,
           orderable: false
         },
-        {data:'subject_taglist', visible: false},
-        {data:'place_taglist', visible: false}
+        {data:'subject_tags', visible: false},
+        {data:'place_tags', visible: false}
       ],
       order: [[1, 'asc']],
       stateSave: true

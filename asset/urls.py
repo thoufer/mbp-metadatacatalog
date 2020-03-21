@@ -18,4 +18,5 @@ urlpatterns = [
     path('api/subject-autocomplete', SubjectAutocomplete.as_view(), name='get-subject-tags'),
     path('api/place-autocomplete', PlaceAutocomplete.as_view(), name='get-place-tags'),
     path('api/asset', AssetAPI.as_view({'get':'list'}), name='api-asset'),
+    path('api/detail/<int:pk>/', AssetAPI.as_view({'get': 'retrieve'}), name='api-detail'),
 ]

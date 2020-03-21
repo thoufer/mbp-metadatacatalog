@@ -56,11 +56,13 @@ INSTALLED_APPS = [
     'dal',
     'dal_select2',
     'taggit',
+    'taggit_serializer',
     'asset',
     'django_tables2',
     'rest_framework',
     'django_filters',
     'crispy_forms',
+
 ]
 
 MIDDLEWARE = [

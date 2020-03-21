@@ -106,5 +106,5 @@ class AssetAPI(viewsets.ReadOnlyModelViewSet):
     """
     A basic viewset for viewing assets.
     """
-    serializer_class = AssetSerializer
     queryset = Asset.objects.all()
+    serializer_class = AssetSerializer
