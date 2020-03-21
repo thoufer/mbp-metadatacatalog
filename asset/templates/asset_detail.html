@@ -31,10 +31,12 @@
         <div class="col-3"><h6>Stewardship Organization</h6></div>
         <div class="col-9">{{ asset.organization }}</div>
     </div>
+    {% if asset.partners %}
     <div class="row row-grid">
-        <div class="col-3"><h6>Partners</h6></div>
-        <div class="col-9">{{ asset.partners }}</div>
+      <div class="col-3"><h6>Partners</h6></div>
+      <div class="col-9">{{ asset.partners }}</div>
     </div>
+    {% endif %}
     <div class="row row-grid">
         <div class="col-3"><h6>Storage or maintenance contracted</h6></div>
         <div class="col-9">{{ asset.isContracted|yesno:"Yes,No" }}</div>
@@ -96,13 +98,6 @@
       </div>
     </div>
 
-    {% if asset.partners %}
-    <div class="row row-grid">
-      <div class="col-3"><h6>Partners</h6></div>
-      <div class="col-9">{{ asset.partners }}</div>
-    </div>
-    {% endif %}
-
     <div class="row row-grid">
       <div class="col-3"><h6>Location keywords</h6></div>
       <div class="col-9">{{ asset.place_taglist }}</div>
@@ -111,7 +106,7 @@
 
     <div class="float-right font-italic small" style="padding-top: 75px;">
       Last updated: {{ asset.last_modified |date:"F j, Y" }}
-    </div>     
+    </div>
 
 </div>
 {% endblock content %}
