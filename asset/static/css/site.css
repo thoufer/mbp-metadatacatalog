@@ -99,6 +99,10 @@ div.slider {
   background-color: LightGray;
 }
 
+.form-text, .text-muted {
+    line-height: 20px;
+}
+
 #asset-title {
   margin-left: 10px;
 }
