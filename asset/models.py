@@ -151,7 +151,7 @@ class Asset(models.Model):
                     "requires coordinated planning and management, select the "
                     "assest that is its parent.")
         )
-    name = models.CharField(_('Name'),
+    name = models.CharField(_('Asset Title'),
         max_length=200,
         blank=False,
         help_text=_('A descriptive name of the asset.')
