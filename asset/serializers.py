@@ -5,10 +5,12 @@ from taggit_serializer.serializers import (TagListSerializerField,
 from .models import Asset, Organization
 
 class OrganizationSerializer(serializers.ModelSerializer):
+    """ USFWS Corporate Orgnaization model serializer """
+    CMT_OrganizationCode = serializers.CharField(source="code")
 
     class Meta:
         model = Organization
-        fields = ('region','name',)
+        fields = ('CMT_OrganizationCode','region','name',)
 
 
 class AssetSerializer(TaggitSerializer, serializers.ModelSerializer):
