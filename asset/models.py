@@ -139,6 +139,7 @@ class Asset(models.Model):
         related_name='assets',
         on_delete=models.PROTECT,
         verbose_name=_('Primary Organization of Stewardship'),
+        help_text=_("Select from the dropdown list the USFWS MBP office and region that is responsible for maintenance of the data asset.")
         )
     parent = models.ForeignKey('self',
         blank=True,
@@ -154,28 +155,23 @@ class Asset(models.Model):
     name = models.CharField(_('Asset Title'),
         max_length=200,
         blank=False,
-        help_text=_('A descriptive name of the asset.')
+        help_text=_('A descriptive and unique title of your data asset. FAIR standards recommend a title of 7 words describing where, what, and when. If a data asset is inactive, please include the years the data asset covers.')
         )
     status = models.CharField(_('Status'),
         max_length=23,
         blank=False,
         choices=status_choices,
-        help_text=_("Select the value that best represents the current status "
-            "of the asset. `Inactive` should be used for assets that have ceased "
-            "operations or have been discontinued.")
+        help_text=_("Inactive data assets have no new data generation planned or ongoing. Experimental data assets have short time horizons (e.g., research or one-time management decisions) or are exploratory (e.g., survey development and feasibility effort). Operational assets include data from regular, ongoing data collection efforts without stopping dates. ")
         )
     isContracted = models.BooleanField(_('Contracted'),
         default=False,
-        help_text=_("Check this for assets in which the storage or maintenance of"
-                    "the asset are performed through a contractual "
-                    "aggreeement with a non-fws entity.")
+        help_text=_("Is the storage or maintenance of the data asset performed by a third-party outside of USFWS through a contractual agreement? If so, please check that the data asset is contracted. ")
         )
     spatial_scale = models.CharField(
         max_length=50,
         blank=False,
         choices= spatial_scale_choices,
-        help_text=_("Choose the spatial scale that best represents the largest "
-                    "scale that the data are collected.")
+        help_text=_("Select the option that best represents the largest scale that the data are collected.")
         )
     start_month = models.CharField(_('Collection start month'),
         max_length=3,
