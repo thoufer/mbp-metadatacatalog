@@ -1,7 +1,7 @@
 beautifulsoup4==4.9.0
 certifi==2020.4.5.1
 coverage==5.1
-Django==2.2.11
+Django==2.2.13
 django-autocomplete-light==3.5.1
 django-bootstrap4==1.1.1
 django-crispy-forms==1.9.0
